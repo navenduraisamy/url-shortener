@@ -60,6 +60,7 @@ def shorten_url():
         saved_url = existence.original_url
         if saved_url == original_url:
             return jsonify(
+                key=hash_value,
                 shortened_url=f"https://{SERVER_HOST}/{hash_value}",
                 original_url=original_url
             ), 200
@@ -76,6 +77,7 @@ def shorten_url():
     db.session.commit()
 
     return jsonify(
+        key=hash_value,
         shortened_url=f"http://{SERVER_HOST}/{hash_value}",
         original_url=original_url
     ), 201
