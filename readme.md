@@ -1,5 +1,5 @@
 # URL Shortener
-
+Problem statement - https://codingchallenges.fyi/challenges/challenge-url-shortener
 ## Setting up the environment
 ```shell
 python -m venv venv
@@ -16,7 +16,7 @@ There server by default starts on port 80.
 ## Endpoints
 ### Create a short url
 ```shell
-curl -X POST <HOST>:80/shorten -d { "url": "<url_to_shorten>"}
+curl -X POST <HOST>:80/shorten -d {"url": "<url_to_shorten>"}
 ```
 
 ### Redirect from short url
